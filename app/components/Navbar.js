@@ -37,7 +37,7 @@ export default function Navbar({ isVisible, cartItems, totalItems, totalPrice, o
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-      <div className={`container mx-auto pl-2 landscape:pl-0 landscape:-ml-4 md:pl-6 pr-4 py-4 flex ${isDark ? 'justify-end' : 'justify-between'} items-center`}>
+      <div className={`container mx-auto pl-2 landscape:pl-0 landscape:-ml-4 md:pl-6 pr-4 py-2 md:py-4 flex ${isDark ? 'justify-end' : 'justify-between'} items-start md:items-center`}>
         {!isDark && (
           <div className="transition-all duration-300 opacity-100">
             <Logo isVisible={isVisible} />
@@ -45,7 +45,7 @@ export default function Navbar({ isVisible, cartItems, totalItems, totalPrice, o
         )}
         
         {/* Menu et Panier */}
-        <div className="flex items-center space-x-0 md:space-x-1 md:absolute md:top-4 md:right-4 relative z-50">
+        <div className="flex items-start md:items-center space-x-0 md:space-x-1 md:absolute md:top-4 md:right-4 relative z-50">
           {/* Menu desktop - masqué pour la page Shabbat */}
           {!isDark && (
             <nav className="hidden md:flex items-center space-x-6">
@@ -74,7 +74,7 @@ export default function Navbar({ isVisible, cartItems, totalItems, totalPrice, o
           
           {/* Hamburger menu - visible sur mobile toujours, et sur desktop si isDark */}
           <button
-            className={`flex flex-col justify-center items-center w-10 h-10 focus:outline-none cursor-pointer pointer-events-auto z-50 ${isDark ? 'block' : 'md:hidden'}`}
+            className={`flex flex-col justify-center items-center w-10 h-10 mt-0.5 focus:outline-none cursor-pointer pointer-events-auto z-50 ${isDark ? 'block' : 'md:hidden'}`}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Ouvrir le menu"
             style={{ transform: isDark ? 'translateY(7px)' : 'translateY(0)' }}
