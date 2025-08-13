@@ -1,0 +1,69 @@
+name: 🔄 Maintenance Upstash & Supabase
+
+on:
+  schedule:
+    # Toutes les 6 heures
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Permet de déclencher manuellement
+
+jobs:
+  maintain-databases:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4
+      
+    - name: 🔧 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: 📦 Install dependencies
+      run: |
+        echo "📦 Installation des dépendances..."
+        npm ci
+        echo "✅ Dépendances installées"
+        
+    - name: 🔍 Vérifier les variables d'environnement
+      run: |
+        echo "🔍 Vérification des variables d'environnement..."
+        echo "UPSTASH_REDIS_REST_URL: ${UPSTASH_REDIS_REST_URL:+✅ Configurée}"
+        echo "UPSTASH_REDIS_REST_TOKEN: ${UPSTASH_REDIS_REST_TOKEN:+✅ Configurée}"
+        echo "NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL:+✅ Configurée}"
+        echo "NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY:+✅ Configurée}"
+        
+    - name: 🔄 Maintain Upstash & Supabase
+      env:
+        UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
+        UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+        NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+      run: |
+        echo "🚀 Démarrage de la maintenance des bases de données..."
+        echo "⏰ $(date)"
+        
+        # Utiliser le script optimisé pour GitHub Actions
+        node utils/github-actions-maintenance.js
+        
+        echo "✅ Maintenance terminée à $(date)"
+        
+    - name: 📊 Status Report
+      if: success()
+      run: |
+        echo "🎉 Maintenance des bases de données terminée avec succès !"
+        echo "⏰ Prochaine maintenance dans 6 heures"
+        echo "📊 Bases maintenues actives :"
+        echo "   - Upstash Redis ✅"
+        echo "   - Supabase ✅"
+        
+    - name: ❌ Error Report
+      if: failure()
+      run: |
+        echo "💥 La maintenance a échoué !"
+        echo "📋 Vérifiez les logs ci-dessus pour plus de détails"
+        echo "🔧 Actions possibles :"
+        echo "   - Vérifier les variables d'environnement"
+        echo "   - Vérifier la connectivité réseau"
+        echo "   - Vérifier les permissions des bases de données" 

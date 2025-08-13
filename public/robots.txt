@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://el-meleh-de-la-paella-ibiza.com
+
+# Sitemaps
+Sitemap: https://el-meleh-de-la-paella-ibiza.com/sitemap.xml

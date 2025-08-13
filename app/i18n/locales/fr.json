@@ -1,0 +1,75 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "menu": "Menu",
+    "reservation": "Réservation",
+    "commandes": "Commandes",
+    "avis": "Avis",
+    "notreHistoire": "Notre Histoire",
+    "ouMangerCacher": "Où manger cacher",
+    "cv": "CV"
+  },
+  "home": {
+    "title": "MEKBOUBA, BOULETTES & PIMENTS 🌶️",
+    "subtitle": "Une expérience culinaire unique à Ibiza",
+    "description": "Des saveurs judéo-espagnoles, partout à Ibiza, tous les jours.",
+    "orderButton": "Commandez",
+    "reserveButton": "Réservez votre kiff dès maintenant",
+    "reserveSubtitle": "c'est open 🚀",
+    "delivery": "Livraisons partout sur l'ile du dimanche au vendredi",
+    "preOrder": "Pré-Commande Obligatoire",
+    "freeDelivery": "à partir de 4 personnes",
+    "kosherMeat": "Viande cacher by",
+    "kosherFriendly": "Kosher Friendly Ibiza"
+  },
+  "menu": {
+    "title": "Notre Menu",
+    "sbm": "Sandwich Boulettes Mekbouba",
+    "bbm": "Box Boulettes Mekbouba",
+    "price": "26€",
+    "orderNow": "Commandez maintenant",
+    "description": "Des saveurs judéo-espagnoles, partout à Ibiza, tous les jours."
+  },
+  "reservation": {
+    "title": "Réservez chez EL MELEH DE LA PAELLA 👑",
+    "subtitle": "Kosher Friendly",
+    "description": "Livraisons partout sur l'ile du dimanche au vendredi",
+    "form": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "phone": "Téléphone",
+      "email": "Email",
+      "date": "Date de réservation",
+      "time": "Heure",
+      "guests": "Nombre de personnes",
+      "notes": "Notes spéciales",
+      "submit": "Réserver"
+    }
+  },
+  "footer": {
+    "title": "MEKBOUBA, BOULETTES & PIMENTS 🌶️",
+    "description": "Une expérience culinaire unique à Ibiza, alliant saveurs tunisiennes authentiques et ambiance chaleureuse.",
+    "hours": "Horaires d'ouverture",
+    "contact": "Contact",
+    "address": "Carrer de sa Creu, 07800",
+    "city": "Ibiza, Espagne",
+    "phone": "+33 7 56 87 23 52",
+    "social": {
+      "instagram": "Instagram",
+      "facebook": "Facebook"
+    },
+    "copyright": "© 2025 MEKBOUBA, BOULETTES & PIMENTS 🌶️"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent"
+  }
+} 

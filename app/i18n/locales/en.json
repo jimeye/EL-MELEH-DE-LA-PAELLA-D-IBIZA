@@ -1,0 +1,75 @@
+{
+  "navigation": {
+    "home": "Home",
+    "menu": "Menu",
+    "reservation": "Reservation",
+    "commandes": "Orders",
+    "avis": "Reviews",
+    "notreHistoire": "Our Story",
+    "ouMangerCacher": "Where to eat kosher",
+    "cv": "CV"
+  },
+  "home": {
+    "title": "MEKBOUBA, MEATBALLS & PEPPERS 🌶️",
+    "subtitle": "A unique culinary experience in Ibiza",
+    "description": "Judeo-Tunisian flavors, all over Ibiza, every day.",
+    "orderButton": "Order",
+    "reserveButton": "Book your experience now",
+    "reserveSubtitle": "it's open 🚀",
+    "delivery": "Delivery every day",
+    "preOrder": "Pre-order required",
+    "freeDelivery": "Free delivery for 6 BBM and SBM",
+    "kosherMeat": "Kosher meat by",
+    "kosherFriendly": "Kosher Friendly Ibiza"
+  },
+  "menu": {
+    "title": "Our Menu",
+    "sbm": "Mekbouba Meatball Sandwich",
+    "bbm": "Mekbouba Meatball Box",
+    "price": "26€",
+    "orderNow": "Order now",
+    "description": "Judeo-Tunisian flavors, all over Ibiza, every day."
+  },
+  "reservation": {
+    "title": "Book at EL MELEH DE LA PAELLA 👑",
+    "subtitle": "Kosher Friendly",
+    "description": "Delivery every day",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone",
+      "email": "Email",
+      "date": "Reservation Date",
+      "time": "Time",
+      "guests": "Number of people",
+      "notes": "Special notes",
+      "submit": "Book"
+    }
+  },
+  "footer": {
+    "title": "MEKBOUBA, MEATBALLS & PEPPERS 🌶️",
+    "description": "A unique culinary experience in Ibiza, combining authentic Tunisian flavors and warm atmosphere.",
+    "hours": "Opening hours",
+    "contact": "Contact",
+    "address": "Carrer de sa Creu, 07800",
+    "city": "Ibiza, Spain",
+    "phone": "+33 7 56 87 23 52",
+    "social": {
+      "instagram": "Instagram",
+      "facebook": "Facebook"
+    },
+    "copyright": "© 2025 MEKBOUBA, MEATBALLS & PEPPERS 🌶️"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  }
+} 

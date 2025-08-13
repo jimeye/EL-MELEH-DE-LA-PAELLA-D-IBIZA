@@ -1,0 +1,75 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "menu": "Menú",
+    "reservation": "Reserva",
+    "commandes": "Pedidos",
+    "avis": "Opiniones",
+    "notreHistoire": "Nuestra Historia",
+    "ouMangerCacher": "Dónde comer kosher",
+    "cv": "CV"
+  },
+  "home": {
+    "title": "MEKBOUBA, ALBÓNDIGAS & PIMIENTOS 🌶️",
+    "subtitle": "Una experiencia culinaria única en Ibiza",
+    "description": "Sabores judeo-tunecinos, por toda Ibiza, todos los días.",
+    "orderButton": "Pedir",
+    "reserveButton": "Reserva tu experiencia ahora",
+    "reserveSubtitle": "está abierto 🚀",
+    "delivery": "Entrega todos los días",
+    "preOrder": "Pedido previo obligatorio",
+    "freeDelivery": "Entrega gratis para 6 BBM y SBM",
+    "kosherMeat": "Carne kosher por",
+    "kosherFriendly": "Kosher Friendly Ibiza"
+  },
+  "menu": {
+    "title": "Nuestro Menú",
+    "sbm": "Sándwich de Albóndigas Mekbouba",
+    "bbm": "Caja de Albóndigas Mekbouba",
+    "price": "26€",
+    "orderNow": "Pedir ahora",
+    "description": "Sabores judeo-tunecinos, por toda Ibiza, todos los días."
+  },
+  "reservation": {
+    "title": "Reserva en EL MELEH DE LA PAELLA 👑",
+    "subtitle": "Kosher Friendly",
+    "description": "Entrega todos los días",
+    "form": {
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "phone": "Teléfono",
+      "email": "Email",
+      "date": "Fecha de reserva",
+      "time": "Hora",
+      "guests": "Número de personas",
+      "notes": "Notas especiales",
+      "submit": "Reservar"
+    }
+  },
+  "footer": {
+    "title": "MEKBOUBA, ALBÓNDIGAS & PIMIENTOS 🌶️",
+    "description": "Una experiencia culinaria única en Ibiza, combinando sabores tunecinos auténticos y ambiente acogedor.",
+    "hours": "Horarios de apertura",
+    "contact": "Contacto",
+    "address": "Carrer de sa Creu, 07800",
+    "city": "Ibiza, España",
+    "phone": "+33 7 56 87 23 52",
+    "social": {
+      "instagram": "Instagram",
+      "facebook": "Facebook"
+    },
+    "copyright": "© 2025 MEKBOUBA, ALBÓNDIGAS & PIMIENTOS 🌶️"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior"
+  }
+} 
