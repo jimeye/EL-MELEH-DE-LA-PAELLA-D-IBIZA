@@ -24,7 +24,12 @@ export default function Logo({ isVisible }) {
           onClick={handleLogoClick}
           style={{ cursor: 'pointer' }}
         >
-          {isShabbatPage ? 'EL MELEH DE LA PAELLA D’IBIZA' : 'EL MELEH DE LA PAELLA D’IBIZA'}
+          <span>
+            EL MELEH
+            <br className="block md:hidden" />
+            <span className="hidden md:inline"> </span>
+            DE LA PAELLA D’IBIZA
+          </span>
         </h1>
         <div className="text-base md:text-lg text-left w-full -mt-2">
           Kosher Friendly
