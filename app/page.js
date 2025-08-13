@@ -121,7 +121,7 @@ export default function HomeNew() {
 
   return (
     <OrientationLock>
-      <main className="min-h-screen bg-[#f9f7f2]">
+      <main className="min-h-screen bg-white">
         <Navbar isVisible={isHeaderVisible} />
         
         {/* Hero Section avec Images à la Suite */}
@@ -130,7 +130,7 @@ export default function HomeNew() {
         </section>
         
         {/* H1 Principal pour SEO */}
-        <section className="py-8 bg-[#f9f7f2] relative">
+        <section className="py-8 bg-white relative">
           <div className="absolute inset-0 z-0" style={{
             backgroundImage: "url('/images/paella de poisson/paella-poisson-ibiza-kosher-cacher-friendly-ou-manger-cacher-1.webp')",
             backgroundSize: 'cover',
@@ -310,7 +310,7 @@ export default function HomeNew() {
          </section>
 
         {/* Gallery Section */}
-        <section id="gallery" className="relative min-h-screen bg-[#f9f7f2] py-20 hidden">
+        <section id="gallery" className="relative min-h-screen bg-white py-20 hidden">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold text-gray-800 mb-6">Diner Room</h2>
@@ -344,7 +344,7 @@ export default function HomeNew() {
         </section>
 
         {/* Instagram Section (masqué) */}
-        <section className="bg-[#f9f7f2] relative hidden">
+        <section className="bg-white relative hidden">
           {/* Feed Instagram en temps réel - plein écran */}
           <InstagramFeed />
           

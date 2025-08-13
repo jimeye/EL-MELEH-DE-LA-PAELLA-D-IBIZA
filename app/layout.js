@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className={`font-sans ${lilitaOne.variable}`}>
+      <body className={`font-sans ${lilitaOne.variable} bg-white`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

@@ -331,7 +331,7 @@ export default function ReservationPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100 reservation-page">
+    <div className="flex flex-col min-h-screen bg-white reservation-page">
       <main className="flex-grow">
         <Navbar 
         isVisible={isHeaderVisible} 
