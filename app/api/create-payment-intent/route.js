@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 // import { Redis } from '@upstash/redis';
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 // const redis = new Redis({
 //   url: process.env.UPSTASH_REDIS_REST_URL,
 //   token: process.env.UPSTASH_REDIS_REST_TOKEN,
@@ -10,6 +8,13 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 export async function POST(request) {
   try {
+    const secretKey = process.env.STRIPE_SECRET_KEY;
+    if (!secretKey) {
+      console.error('STRIPE_SECRET_KEY manquante');
+      return NextResponse.json({ error: 'Configuration Stripe manquante' }, { status: 500 });
+    }
+    const stripe = new Stripe(secretKey);
+
     const { amount, paymentType, orderData } = await request.json();
 
     // Génère un identifiant unique pour la commande
