@@ -1,3 +1,39 @@
+# EL MELEH DE LA PAELLA D'IBIZA
+
+Site Next.js déployable sur Vercel.
+
+## Démarrage
+
+```bash
+npm install
+npm run dev
+```
+
+## Build / Production
+
+```bash
+npm run build
+npm start
+```
+
+## Scripts utiles
+
+```bash
+npm run lint        # Lint Next.js
+npm run format      # Formater avec Prettier
+npm run typecheck   # (si TS) vérifier les types
+```
+
+## Déploiement
+
+1. Push sur GitHub (branche `main`)
+2. Import sur Vercel → Next.js auto
+3. Configurer les variables d'environnement si nécessaire
+
+## Licence
+
+© 2025 EL MELEH DE LA PAELLA D'IBIZA
+
 # 📋 Script de renommage de fichiers PDF
 
 Ce script permet de renommer automatiquement vos fichiers PDF avec un format de date séquentiel.
