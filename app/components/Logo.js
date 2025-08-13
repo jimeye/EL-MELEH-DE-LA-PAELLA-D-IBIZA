@@ -20,7 +20,7 @@ export default function Logo({ isVisible }) {
     }`}>
       <div className="flex flex-col items-start md:items-center justify-center w-auto md:w-full">
         <h1 
-          className="text-2xl md:text-3xl font-bold text-left md:text-center cursor-pointer hover:text-[#f9f7f2] transition-colors"
+          className="text-2xl md:text-3xl font-bold text-left md:text-center cursor-pointer hover:text-[#f9f7f2] transition-colors leading-tight"
           onClick={handleLogoClick}
           style={{ cursor: 'pointer' }}
         >
@@ -28,7 +28,7 @@ export default function Logo({ isVisible }) {
             EL MELEH
             <br className="block md:hidden" />
             <span className="hidden md:inline"> </span>
-            DE LA PAELLA D’IBIZA
+            <span className="block md:inline -mt-2">DE LA PAELLA D’IBIZA</span>
           </span>
         </h1>
         <div className="text-base md:text-lg text-left w-full -mt-2">
