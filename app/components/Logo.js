@@ -18,7 +18,7 @@ export default function Logo({ isVisible }) {
     <div className={`text-white landscape:pl-6 md:pl-8 transition-all duration-300 ${
       isVisible ? 'opacity-100' : 'opacity-0'
     }`}>
-      <div className="flex flex-col items-start md:items-center justify-center w-full">
+      <div className="flex flex-col items-start md:items-center justify-center w-auto md:w-full">
         <h1 
           className="text-2xl md:text-3xl font-bold text-left md:text-center cursor-pointer hover:text-[#f9f7f2] transition-colors"
           onClick={handleLogoClick}
