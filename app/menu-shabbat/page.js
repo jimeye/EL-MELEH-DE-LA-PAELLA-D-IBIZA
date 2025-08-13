@@ -94,6 +94,11 @@ export default function MenuShabbat() {
     }
   };
 
+  // Permettre des salades en extra (payantes) une fois la formule remplie
+  const addExtraSalade = (salade) => {
+    setCart(prev => [...prev, { ...salade, type: 'salade_extra', prix: salade.price }]);
+  };
+
   const addSide = (side) => {
     const sideWithWine = {
       ...side,
@@ -197,7 +202,9 @@ export default function MenuShabbat() {
         salades: selectedSalades,
         sides: sidesWithQuantities
       };
-      setCart([commande]);
+      // Conserver les extras déjà ajoutés (salades/sides à la carte)
+      const extras = cart.filter(item => item.type !== 'formule');
+      setCart([commande, ...extras]);
       alert(`Formule ${formule.personnes} personnes ajoutée au panier !`);
     } else {
       alert(`Il faut sélectionner ${formule.couscous} couscous et ${formule.salades} salades exactement.`);
@@ -493,21 +500,22 @@ export default function MenuShabbat() {
                           if (selectedSalades.some(s => s.name === item.name)) {
                             // Désélectionner
                             setSelectedSalades(prev => prev.filter(s => s.name !== item.name));
-                          } else {
-                            // Sélectionner
+                          } else if (selectedSalades.length < formules[selectedFormule].salades) {
+                            // Sélectionner dans le quota de la formule
                             addSalade(item);
+                          } else {
+                            // Ajout en extra, au-delà du quota
+                            addExtraSalade(item);
                           }
                         }}
-                        disabled={!selectedSalades.some(s => s.name === item.name) && selectedSalades.length >= formules[selectedFormule].salades}
+                        disabled={false}
                         className={`px-2 py-0.5 text-xs border-2 border-black transition-colors ${
                           selectedSalades.some(s => s.name === item.name)
                             ? 'bg-transparent text-black'
-                            : selectedSalades.length < formules[selectedFormule].salades
-                            ? 'bg-transparent text-black hover:bg-[#0038B8] hover:text-black'
-                            : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                            : 'bg-transparent text-black hover:bg-[#0038B8] hover:text-black'
                         }`}
                       >
-                        {selectedSalades.some(s => s.name === item.name) ? '✓' : 'Formule+'}
+                        {selectedSalades.some(s => s.name === item.name) ? '✓' : (selectedSalades.length < formules[selectedFormule].salades ? 'Formule+' : '+ Extra')}
                       </button>
                     ) : (
                       <button
@@ -653,8 +661,8 @@ export default function MenuShabbat() {
                     </div>
                   )}
                   
-                  {/* Items à la carte */}
-                  {cart.map((item, index) => (
+                  {/* Items à la carte (extras salades/sides) */}
+                  {cart.filter(item => item.type !== 'formule').map((item, index) => (
                     <div key={index} className="border-b border-black pb-2">
                       {item.type === 'formule' ? (
                         <div>
@@ -679,9 +687,9 @@ export default function MenuShabbat() {
                             </div>
                           )}
                         </div>
-                      ) : (
+                       ) : (
                         <div className="flex justify-between">
-                          <span>{item.name}</span>
+                          <span>{item.type === 'salade_extra' ? `${item.name} (extra)` : item.name}</span>
                           <span>{item.prix}€</span>
                         </div>
                       )}
