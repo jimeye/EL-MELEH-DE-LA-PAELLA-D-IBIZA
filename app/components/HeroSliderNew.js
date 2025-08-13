@@ -173,6 +173,7 @@ export default function HeroSliderNew({ images, onSliderScroll }) {
                 priority={index === 0}
                 sizes="100vw"
                 quality={85}
+                unoptimized
               />
               <div className="absolute inset-0 bg-black/30" />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10">
