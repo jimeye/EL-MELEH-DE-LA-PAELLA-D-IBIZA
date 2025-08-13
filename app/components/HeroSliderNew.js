@@ -131,10 +131,11 @@ export default function HeroSliderNew({ images, onSliderScroll }) {
   return (
     <div 
       ref={sliderRef}
-      className="relative h-screen overflow-y-scroll scroll-smooth snap-y snap-mandatory"
+      className="relative h-screen overflow-y-scroll scroll-smooth snap-y snap-proximity"
       style={{ 
         scrollBehavior: 'smooth',
-        scrollSnapType: 'y mandatory',
+        scrollSnapType: 'y proximity',
+        overscrollBehaviorY: 'auto',
         WebkitOverflowScrolling: 'touch'
       }}
       onScroll={handleSliderScroll}
