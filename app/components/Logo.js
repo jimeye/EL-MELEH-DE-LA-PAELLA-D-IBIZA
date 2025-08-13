@@ -26,6 +26,7 @@ export default function Logo({ isVisible }) {
         >
           <span>
             <span className="block md:inline">EL MELEH</span>
+            <span className="hidden md:inline"> </span>
             <span className="block md:inline">DE LA PAELLA D’IBIZA</span>
           </span>
         </h1>
